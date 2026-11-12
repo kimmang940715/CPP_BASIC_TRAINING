@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="BASIC_TRANING.cpp" />
     <ClCompile Include="TagType.cpp" />
+    <ClCompile Include="TextRPG.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
