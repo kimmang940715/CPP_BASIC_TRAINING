@@ -21,16 +21,14 @@ int defence;
 
 void EnterLobby();
 void SelectPlayer();
-
+void EnterField();
+void CreateRandomMonster();
 
 int main()
 {
-	while (true)
-	{
-		// 입력
-		// 로직
-		// 출력
-	}
+	srand(time(0));
+	EnterLobby();
+
 }
 
 void EnterLobby()
@@ -44,7 +42,29 @@ void EnterLobby()
 		// 플레이어 직업 선택
 		SelectPlayer();
 
-		int a  = 3;
+		cout << "------------------------------" << endl;
+		cout << "[1]필드 입장 [2]게임 종료" << endl;
+		cout << "------------------------------" << endl;
+	
+		int input;
+		cin >> input;
+
+		if (input == 1)
+		{
+			cout << "필드에 입장했습니다!" << endl;
+			EnterField();
+			break;
+		}
+		else if (input == 2)
+		{
+			cout << "게임을 종료합니다!" << endl;
+			exit(0);
+		}
+		else
+		{
+			cout << "잘못된 입력입니다!" << endl;
+		}
+		
 	}
 }
 
@@ -69,6 +89,7 @@ void SelectPlayer()
 			attack = 10;
 			defence = 5;
 			playerType = PT_KNIGHT;
+			break;
 		}
 		else if (choice = PT_ARCHER)
 		{
@@ -77,6 +98,7 @@ void SelectPlayer()
 			attack = 15;
 			defence = 3;
 			playerType = PT_ARCHER;
+			break;
 		}
 		else if (choice = PT_WIZARD)
 		{
@@ -85,7 +107,28 @@ void SelectPlayer()
 			attack = 25;
 			defence = 0;
 			playerType = PT_WIZARD;
+			break;
 		}
 	}
 
+}
+
+void EnterField() 
+{
+	cout << "------------------------------" << endl;
+	cout << "필드에 입장했습니다!" << endl;
+	cout << "------------------------------" << endl;
+
+	cout << "[Player HP] : " << hp << "[Player ATT] : " << attack << "[Player DEF] : " << defence << endl;
+
+
+	// 몬스터 생성
+	CreateRandomMonster();
+
+
+}
+
+void CreateRandomMonster()
+{
+	int randomChoice = 1 + (rand() % 3);
 }
