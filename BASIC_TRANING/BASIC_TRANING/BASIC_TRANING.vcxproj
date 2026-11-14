@@ -124,8 +124,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BASIC_TRANING.cpp" />
+    <ClCompile Include="FileDivide.cpp" />
+    <ClCompile Include="Helper.cpp" />
     <ClCompile Include="TagType.cpp" />
     <ClCompile Include="TextRPG.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Helper.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

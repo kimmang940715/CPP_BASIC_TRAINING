@@ -51,7 +51,7 @@ void EnterBattle();
 void CheckLevelUp();
 void WaitForNextKey();
 
-int main()
+int main_2()
 {
 	srand(time(0));
 	EnterLobby();

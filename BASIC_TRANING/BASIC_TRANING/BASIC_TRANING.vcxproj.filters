@@ -24,5 +24,16 @@
     <ClCompile Include="TextRPG.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="FileDivide.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Helper.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Helper.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
