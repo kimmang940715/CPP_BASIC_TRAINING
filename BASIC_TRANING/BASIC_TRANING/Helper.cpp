@@ -1,19 +1,34 @@
 #include "Helper.h"
-#include <iostream>
+#include <windows.h>
 
-using namespace std;
+MoveDir GMoveDir;
 
-void Test(int)
+void HandleKeyInput()
 {
-
+	if (::GetAsyncKeyState(VK_LEFT) & 0x8000)
+		GMoveDir = MD_LEFT;
+	else if (::GetAsyncKeyState(VK_RIGHT) & 0x8000)
+		GMoveDir = MD_RIGHT;
+	else if (::GetAsyncKeyState(VK_UP) & 0x8000)
+		GMoveDir = MD_UP;
+	else if (::GetAsyncKeyState(VK_DOWN) & 0x8000)
+		GMoveDir = MD_DOWN;
+	else
+		GMoveDir = MD_NONE;
 }
 
-void Test2()
+void SetCursorPosition(int x, int y)
 {
-	cout << "Hello World";
+	HANDLE output = ::GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD pos = { (SHORT)x, (SHORT)y };
+	::SetConsoleCursorPosition(output, pos);
 }
 
-int main()
+void SetCursorOnOff(bool visible)
 {
-	Test2();
+	HANDLE output = ::GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_CURSOR_INFO cursorInfo;
+	::GetConsoleCursorInfo(output, &cursorInfo);
+	cursorInfo.bVisible = visible;
+	::SetConsoleCursorInfo(output, &cursorInfo);
 }

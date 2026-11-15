@@ -123,14 +123,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Array.cpp" />
     <ClCompile Include="BASIC_TRANING.cpp" />
-    <ClCompile Include="FileDivide.cpp" />
+    <ClCompile Include="GameCoding.cpp" />
     <ClCompile Include="Helper.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Pointer.cpp" />
     <ClCompile Include="TagType.cpp" />
     <ClCompile Include="TextRPG.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helper.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
